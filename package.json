@@ -1,0 +1,19 @@
+{
+  "name": "bs5-starter-template",
+  "version": "1.0.0",
+  "description": "a starter kit for bootstrap",
+  "main": "index.js",
+  "scripts": {
+    "sass:build": "sass --no-source-map scss:css",
+    "sass:watch": "sass --no-source-map --watch scss:css"
+  },
+  "keywords": [],
+  "author": "RCD",
+  "license": "MIT",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.1.0",
+    "bootstrap": "^5.3.8",
+    "bootstrap-icons": "^1.13.1",
+    "sass": "^1.94.2"
+  }
+}

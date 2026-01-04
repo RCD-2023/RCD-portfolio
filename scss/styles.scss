@@ -1,0 +1,75 @@
+.nav-link:hover {
+  text-decoration: underline;
+  text-decoration-color: rgb(40, 19, 117);
+  text-decoration-thickness: 2px;
+}
+.no-decoration:hover {
+  text-decoration: none;
+}
+.navbar {
+  transition: all 0.5s;
+}
+.navbar-opacity {
+  opacity: 0.8;
+  box-shadow: 0px 0px 10px rgb(0 0 0 / 0.5);
+}
+
+.header {
+  background: #3498db;
+  min-height: 500px;
+}
+
+.footer {
+  background: #217dbb;
+}
+
+// Carousel arrows custom color cu schimbarea svg
+
+//
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 16 16'%3E%3Cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E");
+}
+//
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 16 16'%3E%3Cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+}
+.prev-white-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 16 16'%3E%3Cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E");
+}
+//
+.next-white-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='white' viewBox='0 0 16 16'%3E%3Cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3E%3C/svg%3E");
+}
+//
+
+.fa-close-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%; //cerc
+  border: 1px solid #ccc;
+  background: rgb(131, 115, 158);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.fa-close-btn i {
+  font-size: 20px;
+  color: #333;
+}
+
+.fa-close-btn:hover {
+  background: rgb(148, 105, 223);
+  transform: scale(1.4);
+}
+
+.card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
