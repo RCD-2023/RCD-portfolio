@@ -1,3 +1,7 @@
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
 .nav-link:hover {
   text-decoration: underline;
   text-decoration-color: rgb(40, 19, 117);
@@ -77,4 +81,24 @@
 .badge {
   margin-right: 0.25rem;
   margin-bottom: 0.25rem;
+}
+
+.link-hire {
+  padding: 8px 10px;
+  color: #070606;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+  background-color: #10bcee;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.link-hire:hover,
+.link-hire:active {
+  background-color: #107391;
+  color: #ccc;
+}
+
+.tech-list {
+  list-style-type: none;
 }
