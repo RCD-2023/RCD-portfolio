@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="/css/styles.css">
 
     <script defer src="/js/bootstrap.bundle.min.js"></script>
-    <script defer src="js/script.js"></script>
+    <script defer src="js/script.js?v=1.1.2"></script>
     <title>RCD-webdev</title>
 </head>
 
@@ -722,9 +722,13 @@
         <div class="d-grid text-center">
             <p class="text-info-text-emphasis fw-bold" href="#">Contact me</p>
         </div>
+            
         <div class="contact-form " >
             <div class="container">
                 <div class="col-md-8 mx-auto">
+                    <!-- Confirmation of sending message  -->
+                <div class="d-none my-4 p-2 d-block text-center text-bg-info" id="formState">
+                </div>
                     <form action="https://formspree.io/f/xykzdklp" method="POST" class=" p-2 mb-4" id="contactForm">
                         <div class="mb-3">
                             <label for="name" class="form-label text-white">Your name:</label>
@@ -745,9 +749,7 @@
                             <button type="submit" class="btn btn-dark">Submit</button>
                         </div>
                     </form>
-                    <!-- Confirmation of sending message  -->
-                <div class="d-none mx-4 my-4 p-2 d-block text-center text-bg-info" id="formState">
-                </div>
+                
             </div>
         </div>
         
