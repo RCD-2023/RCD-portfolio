@@ -53,8 +53,9 @@
 // window.addEventListener('load', showBreakpoints);
 // window.addEventListener('resize', showBreakpoints);
 
-//Code for the navbar to change color when scroll
-
+/**
+ * Code for the navbar to change color when scroll
+ */
 function userScroll() {
   const navbar = document.querySelector('.navbar');
 
@@ -69,3 +70,49 @@ function userScroll() {
   });
 }
 document.addEventListener('DOMContentLoaded', userScroll);
+
+/**
+ * Function to intercept submit
+ */
+const form = document.getElementById('contactForm');
+const state = document.getElementById('formState');
+
+// Handler mesaj sa dispara (timer)
+function hideMessage(delay = 2000) {
+  setTimeout(() => {
+    state.classList.add('d-none');
+  }, delay);
+}
+
+form.addEventListener('submit', async function (e) {
+  e.preventDefault(); // oprește redirect-ul
+
+  const data = new FormData(form);
+
+  try {
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: data,
+      headers: {
+        Accept: 'application/json',
+      },
+    });
+
+    if (response.ok) {
+      form.reset();
+      state.classList.remove('d-none');
+      state.textContent = 'Mesajul a fost trimis.';
+      hideMessage();
+    } else {
+      state.classList.remove('d-none');
+      state.classList.replace('text-success', 'text-danger');
+      state.textContent = 'A apărut o eroare. Încearcă din nou.';
+      hideMessage();
+    }
+  } catch (error) {
+    state.classList.remove('d-none');
+    state.classList.replace('text-success', 'text-danger');
+    state.textContent = 'Nu s-a putut trimite mesajul.';
+    hideMessage();
+  }
+});

@@ -670,8 +670,7 @@
                                     class="link-dark fw-semibold" href="https://github.com/RCD-2023/rcd-prop-pulse"><i
                                         class="fa-solid fa-up-right-from-square ms-1"></i></a>.</p>
                             <p>Developed as part of a Next.js course by Brad Traversy, this project focuses on applying
-                                SSR concepts and integrating common real-world features such as authentication, image
-                                management, and search functionality.</p>
+                                SSR concepts and integrating common real-world features such as database interaction, authentication and user profile creation, cloud-based image management, bookmarking, maps, and search functionality.</p>
                         </div>
                     </div>
                 </div>
@@ -723,35 +722,39 @@
         <div class="d-grid text-center">
             <p class="text-info-text-emphasis fw-bold" href="#">Contact me</p>
         </div>
-        <div class="contact-form " id="contactForm">
+        <div class="contact-form " >
             <div class="container">
                 <div class="col-md-8 mx-auto">
-                    <form action="https://formspree.io/f/xykzdklp" method="POST" class=" p-2 mb-4">
+                    <form action="https://formspree.io/f/xykzdklp" method="POST" class=" p-2 mb-4" id="contactForm">
                         <div class="mb-3">
                             <label for="name" class="form-label text-white">Your name:</label>
-                            <input type="text" class="form-control" name="name" id="name">
+                            <input type="text" class="form-control" name="name" id="name" required>
                         </div>
                         <div class="mb-3">
                             <label for="email" class="form-label text-white">Your Email:</label>
                             <input type="email" class="form-control" name="email" id="email"
-                                aria-describedby="emailHelp">
+                                aria-describedby="emailHelp" required>
                             <div id="emailHelp" class="form-text text-white">I'll never share your email with anyone
                                 else.</div>
                         </div>
                         <div class="mb-3">
                             <textarea class="form-control form-control-lg" name="message" rows="6"
-                                placeholder="Message"></textarea>
+                                placeholder="Message" required></textarea>
                         </div>
                         <div class="d-grid d-md-flex justify-content-md-end">
                             <button type="submit" class="btn btn-dark">Submit</button>
                         </div>
                     </form>
+                    <!-- Confirmation of sending message  -->
+                <div class="d-none mx-4 my-4 p-2 d-block text-center text-bg-info" id="formState">
                 </div>
             </div>
         </div>
+        
+
+        </div>
         <div class="copyright_area text-center">
             <p class="mb-2 text-info-text-emphasis fw-bold">&#169;2025 Codreanu Daniel</p>
-
         </div>
     </footer>
 </body>
