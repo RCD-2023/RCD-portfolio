@@ -54,22 +54,38 @@
 // window.addEventListener('resize', showBreakpoints);
 
 /**
- * Code for the navbar to change color when scroll
+ * Code for the navbar to change color when scroll and for the to-top button
  */
-function userScroll() {
-  const navbar = document.querySelector('.navbar');
+const navbar = document.querySelector('.navbar');
+const btnToTop = document.querySelector('#to-top');
 
+function userScroll() {
   window.addEventListener('scroll', () => {
     if (window.scrollY > 30) {
       navbar.classList.add('bg-secondary');
       navbar.classList.add('navbar-opacity');
+      btnToTop.classList.add('show-btn');
     } else {
       navbar.classList.remove('bg-secondary');
       navbar.classList.remove('navbar-opacity');
+      btnToTop.classList.remove('show-btn');
     }
   });
 }
-document.addEventListener('DOMContentLoaded', userScroll);
+
+// Legacy code
+// function scrollToTop() {
+//   document.body.scrollTop = 0;
+//   document.documentElement.scrollTop = 0;
+// }
+
+// Actual code
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
+}
 
 /**
  * Function to intercept submit
@@ -77,14 +93,14 @@ document.addEventListener('DOMContentLoaded', userScroll);
 const form = document.getElementById('contactForm');
 const state = document.getElementById('formState');
 
-// Handler mesaj sa dispara (timer)
+// Hide message after delay
 function hideMessage(delay = 2000) {
   setTimeout(() => {
     state.classList.add('d-none');
   }, delay);
 }
 
-form.addEventListener('submit', async function (e) {
+async function submitBtn(e) {
   e.preventDefault(); // oprește redirect-ul
 
   const data = new FormData(form);
@@ -101,18 +117,24 @@ form.addEventListener('submit', async function (e) {
     if (response.ok) {
       form.reset();
       state.classList.remove('d-none');
-      state.textContent = 'Mesajul a fost trimis.';
+      state.textContent = 'Thank you! Your message has been sent.';
       hideMessage();
     } else {
       state.classList.remove('d-none');
       state.classList.replace('text-success', 'text-danger');
-      state.textContent = 'A apărut o eroare. Încearcă din nou.';
+      state.textContent = 'An error occurred. Please try again.';
       hideMessage();
     }
   } catch (error) {
     state.classList.remove('d-none');
     state.classList.replace('text-success', 'text-danger');
-    state.textContent = 'Nu s-a putut trimite mesajul.';
+    state.textContent = 'The message has not been sent. Try again later.';
     hideMessage();
   }
-});
+}
+
+// Event Listners
+document.addEventListener('DOMContentLoaded', userScroll);
+// btnToTop.addEventListener('click', scrollToTop);
+btnToTop.addEventListener('click', scrollToTop);
+form.addEventListener('submit', submitBtn);
