@@ -1,5 +1,5 @@
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 html {
@@ -109,10 +109,11 @@ html {
 
 .to-top-btn {
   position: fixed;
-  z-index: 20;
+  z-index: 1000;
   bottom: 20px;
   right: 20px;
   opacity: 0;
+  pointer-events: none;
   width: 50px;
   height: 52px;
   border: none;
@@ -130,8 +131,10 @@ html {
 .to-top-btn img {
   margin-bottom: 0.25rem;
   width: 25px;
+  pointer-events: none;
 }
 
-.show-btn {
+.to-top-btn.show-btn {
   opacity: 1;
+  pointer-events: auto;
 }
