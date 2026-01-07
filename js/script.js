@@ -136,5 +136,5 @@ async function submitBtn(e) {
 // Event Listners
 document.addEventListener('DOMContentLoaded', userScroll);
 // btnToTop.addEventListener('click', scrollToTop);
-btnToTop.addEventListener('click', scrollToTop);
-form.addEventListener('pointerup', submitBtn);
+btnToTop.addEventListener('pointerup', scrollToTop);
+form.addEventListener('submit', submitBtn);
