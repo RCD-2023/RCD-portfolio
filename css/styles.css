@@ -1,5 +1,5 @@
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 html {
@@ -107,13 +107,12 @@ html {
   list-style-type: none;
 }
 
-.to-top-btn {
+.scroll-top-btn {
   position: fixed;
-  z-index: 1000;
+  z-index: 20;
   bottom: 20px;
   right: 20px;
   opacity: 0;
-  pointer-events: none;
   width: 50px;
   height: 52px;
   border: none;
@@ -124,17 +123,21 @@ html {
   transition: all 0.5s ease-in-out;
 }
 
-.to-top-btn:hover {
+.scroll-top-btn:hover {
   background-color: #1d1d21;
 }
 
-.to-top-btn img {
+.scroll-top-btn img {
   margin-bottom: 0.25rem;
   width: 25px;
-  pointer-events: none;
 }
 
-.to-top-btn.show-btn {
+.show-scroll-btn {
   opacity: 1;
-  pointer-events: auto;
+}
+
+@media (max-width: 576px) {
+  .scroll-top-btn {
+    display: none;
+  }
 }

@@ -57,27 +57,21 @@
  * Code for the navbar to change color when scroll and for the to-top button
  */
 const navbar = document.querySelector('.navbar');
-const btnToTop = document.querySelector('#to-top');
+const btnScrollTop = document.querySelector('#scroll-top');
 
 function userScroll() {
   window.addEventListener('scroll', () => {
     if (window.scrollY > 30) {
       navbar.classList.add('bg-secondary');
       navbar.classList.add('navbar-opacity');
-      btnToTop.classList.add('show-btn');
+      btnScrollTop.classList.add('show-scroll-btn');
     } else {
       navbar.classList.remove('bg-secondary');
       navbar.classList.remove('navbar-opacity');
-      btnToTop.classList.remove('show-btn');
+      btnScrollTop.classList.remove('show-scroll-btn');
     }
   });
 }
-
-// Legacy code
-// function scrollToTop() {
-//   document.body.scrollTop = 0;
-//   document.documentElement.scrollTop = 0;
-// }
 
 // Actual code
 function scrollToTop() {
@@ -135,6 +129,6 @@ async function submitBtn(e) {
 
 // Event Listners
 document.addEventListener('DOMContentLoaded', userScroll);
-// btnToTop.addEventListener('click', scrollToTop);
-btnToTop.addEventListener('pointerup', scrollToTop);
+// btnScrollTop.addEventListener('click', scrollToTop);
 form.addEventListener('submit', submitBtn);
+btnScrollTop.addEventListener('click', scrollToTop);
