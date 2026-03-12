@@ -59,6 +59,7 @@
 const navbar = document.querySelector('.navbar');
 const btnScrollTop = document.querySelector('#scroll-top');
 
+
 function userScroll() {
   window.addEventListener('scroll', () => {
     if (window.scrollY > 30) {
@@ -73,7 +74,7 @@ function userScroll() {
   });
 }
 
-// Actual code
+// Actual code for scroll
 function scrollToTop() {
   window.scrollTo({
     top: 0,
@@ -127,8 +128,14 @@ async function submitBtn(e) {
   }
 }
 
+// Dynamic year in footer
+const year = document.getElementById('year');
+year.textContent = new Date().getFullYear();
+
 // Event Listners
+
 document.addEventListener('DOMContentLoaded', userScroll);
 // btnScrollTop.addEventListener('click', scrollToTop);
 form.addEventListener('submit', submitBtn);
 btnScrollTop.addEventListener('click', scrollToTop);
+
