@@ -4,6 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codreanu Daniel | Web Developer Portfolio</title>
+    <meta name="description"
+        content="Portfolio of Codreanu Daniel, a junior web developer skilled in JavaScript, React, Next.js, Django, and Laravel. View projects, skills, and contact info.">
+    <link rel="canonical" href="https://webdevstart.com/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://webdevstart.com/">
+    <meta property="og:title" content="Codreanu Daniel | Web Developer Portfolio">
+    <meta property="og:description"
+        content="Portfolio of Codreanu Daniel, a junior web developer skilled in JavaScript, React, Next.js, Django, and Laravel. View projects, skills, and contact info.">
+    <meta property="og:image" content="https://webdevstart.com/images/favicon-48.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Codreanu Daniel | Web Developer Portfolio">
+    <meta name="twitter:description"
+        content="Portfolio of Codreanu Daniel, a junior web developer skilled in JavaScript, React, Next.js, Django, and Laravel. View projects, skills, and contact info.">
+    <meta name="twitter:image" content="https://webdevstart.com/images/favicon-48.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/favicon-48.png">
+    <link rel="shortcut icon" type="image/png" href="/images/favicon-48.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
@@ -13,7 +37,20 @@
     <link rel="stylesheet" href="/css/styles.css">
     <script defer src="/js/bootstrap.bundle.min.js"></script>
     <script defer src="js/script.js?v=2"></script>
-    <title>RCD-webdev</title>
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Codreanu Daniel",
+        "jobTitle": "Web Developer",
+        "url": "https://webdevstart.com/",
+        "sameAs": [
+            "https://github.com/RCD-2023"
+        ]
+    }
+    </script>
 </head>
 
 <body>
@@ -338,7 +375,7 @@
                                     class="link-dark fw-semibold"
                                     href="https://github.com/RCD-2023/ecomm-demo"><i
                                         class="fa-solid fa-up-right-from-square ms-1"></i></a>.</p>
-                            <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur laborum aperiam accusantium dolorum eum libero minima ipsum. Illo, culpa nesciunt. </p>
+                            <p class="text-muted">A full-stack e-commerce platform built with Next.js 16, React 19, and TypeScript, featuring product browsing with search and filtering, a persistent shopping cart, and a multi-step checkout with Stripe and PayPal integration. The app includes role-based authentication (NextAuth v5), an admin dashboard with sales analytics comprehensive product, order, and user management, customers reviews, and transactional emails notifications. Data is managed through PostgreSQL (Neon) via Prisma.</p>
                         </div>
                     </div> 
                 </div>
@@ -406,10 +443,7 @@
                             <p class="mb-2 fw-semibold">Link to GitHub repo <a target="_blank" rel="noopener"
                                     class="link-dark fw-semibold" href="https://github.com/RCD-2023/rcd-prop-pulse"><i
                                         class="fa-solid fa-up-right-from-square ms-1"></i></a>.</p>
-                            <p>Developed as part of a Next.js course by Brad Traversy, this project focuses on applying
-                                SSR concepts and integrating common real-world features such as database interaction,
-                                authentication and user profile creation, cloud-based image management, bookmarking,
-                                maps, and search functionality.</p>
+                            <p>Built with Next.js this project demonstrates server-side rendering (SSR )concepts and incorporates real-world features such as database integration, authentication, user profile management, cloud-based image management, bookmarking, maps, and search functionality.</p>
                         </div>
                     </div>
                 </div>
@@ -475,7 +509,7 @@
                             <p class="mb-2 fw-semibold">Link to GitHub repo <a target="_blank" rel="noopener"
                                     class="link-dark fw-semibold" href="https://github.com/RCD-2023/AI-coding"><i
                                         class="fa-solid fa-up-right-from-square ms-1"></i></a>.</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam illo totam natus qui ipsam mollitia aliquam ut ipsum quidem. Optio?</p>
+                            <p>A searchable knowledge hub for developers to manage snippets, prompts, notes, links, files, and images. Built with Next.js 16, React 19, Prisma, Postgres (Neon), and NextAuth v5, featuring AI-powered content organization, Cloudflare R2 storage, and Stripe subscriptions. Developed using AI-assisted workflows with Claude Code and Neon MCP.</p>
                         </div>
                     </div>
                 </div>
@@ -546,7 +580,7 @@
                             <p class="mb-2 fw-semibold">Link to GitHub repo <a target="_blank" rel="noopener"
                                     class="link-dark fw-semibold" href="https://github.com/RCD-2023/proshop-RCDv1demo"><i
                                         class="fa-solid fa-up-right-from-square ms-1"></i></a>.</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur sed aliquam ducimus minima doloribus quasi repellat, eligendi rem sint earum.</p>
+                            <p>A full-stack MERN e-commerce application with product search, pagination, customer reviews, a persistent shopping cart, PayPal payments, and JWT-based authentication. Includes an admin dashboard for managing products, orders, users, and image uploads.Built with React 19, Redux Toolkit (RTK Query), React Bootstrap, Node.js, Express, and MongoDB.</p>
                         </div>
                     </div>
                 </div>
@@ -583,10 +617,7 @@
                                 <div class="carousel-item">
                                     <img src="./images/django/img5-django.png" class="d-block w-100" alt="Edit Task dialog for renaming an existing todo item">
                                 </div>
-                                <div class="carousel-item">
-                                    <img src="./images/django/img6-django.png" class="d-block w-100"
-                                        alt="WHO Regions Finder page with a country name input field">
-                                </div>
+                                
                             </div>
                             <button class="carousel-control-prev" type="button" data-bs-target="#carousel-doseCalc"
                                 data-bs-slide="prev">
@@ -614,7 +645,7 @@
                             <p class="mb-2 fw-semibold">Link to GitHub repo <a target="_blank" rel="noopener"
                                     class="link-dark fw-semibold" href="https://github.com/RCD-2023/python-project1"><i
                                         class="fa-solid fa-up-right-from-square ms-1"></i></a>.</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur sed aliquam ducimus minima doloribus quasi repellat, eligendi rem sint earum.</p>
+                            <p>A real estate listings platform built with Django, PostgreSQL, and Bootstrap. Features property search and filtering, realtor profiles, direct inquiry submission, user dashboards, and an administrative backend for managing listings and contacts.</p>
                         </div>
                     </div>
                 </div>
