@@ -6,6 +6,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.navbar .nav-link {
+  color: rgba(0, 0, 0, 0.75);
+}
+
 .nav-link:hover {
   text-decoration: underline;
   text-decoration-color: rgb(40, 19, 117);
@@ -26,12 +30,12 @@ html {
 }
 
 .header {
-  background: #3498db;
+  background: #2678ad;
   min-height: 500px;
 }
 
 .footer {
-  background: #217dbb;
+  background: #1f78b4;
 }
 
 .carousel-control-prev-icon {
@@ -104,6 +108,10 @@ html {
 .badge {
   margin-right: 0.25rem;
   margin-bottom: 0.25rem;
+}
+
+.badge.bg-primary {
+  color: #212529;
 }
 
 .link-hire {

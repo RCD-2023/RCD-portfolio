@@ -5,6 +5,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.navbar .nav-link {
+  // was inherited rgba(0,0,0,0.65) on bg-primary (~4.0:1), bumped for AA contrast (~4.9:1)
+  color: rgba(0, 0, 0, 0.75);
+}
 .nav-link:hover {
   text-decoration: underline;
   text-decoration-color: rgb(40, 19, 117);
@@ -22,12 +26,14 @@ html {
 }
 
 .header {
-  background: #3498db;
+  // was #3498db (white text ~3.15:1), darkened for AA contrast (~4.8:1)
+  background: #2678ad;
   min-height: 500px;
 }
 
 .footer {
-  background: #217dbb;
+  // was #217dbb, darkened for AA contrast (~4.8:1) with white text
+  background: #1f78b4;
 }
 
 // Carousel arrows custom color cu schimbarea svg
@@ -102,6 +108,11 @@ html {
 .badge {
   margin-right: 0.25rem;
   margin-bottom: 0.25rem;
+}
+
+.badge.bg-primary {
+  // was white (#fff) on bg-primary #39c (~3.2:1), darkened for AA contrast (~4.8:1)
+  color: #212529;
 }
 
 .link-hire {
