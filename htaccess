@@ -1,0 +1,8 @@
+RewriteEngine On
+
+#www -> non-www
+RewriteCond %{HTTP_HOST} ^www\.webdevstart\.com$ [NC]
+RewriteRule ^(.*)$ https://webdevstart.com/$1 [L,R=301]
+#index.html -> /
+RewriteCond %{THE_REQUEST} /index\.html [NC]
+RewriteRule ^index\.html$ https://webdevstart.com/ [R=301,L]
